@@ -1,0 +1,106 @@
+
+body{
+    background-color:rgb(12, 12, 54);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.continar{
+    width: 25rem;
+    height: 17rem;
+    margin: 9rem auto;
+}
+.top{
+    height: 70%;
+    width: 100%;
+    position: relative;
+    background-color: skyblue;
+    border-radius:0.3rem 0.3rem 0 0;
+}
+.bottm{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    overflow: hidden;
+    background-color: rgb(34, 28, 26);
+    border-radius:0 0 0.3rem 0.3rem;
+}
+
+.right_box,.left_box{
+    width: 11rem;
+    height: 100%;
+    position: absolute;
+    left: 38%;
+    display: flex;
+    align-items: flex-end;
+    transform-origin:top;
+}
+.shoe{
+    width: 100%;
+    height: 9rem;
+    margin-bottom: -1rem;
+    background: url('https://100dayscss.com/codepen/doc-martens.svg') center center no-repeat;
+    background-size: cover;
+    transform-origin:0 95%  ;
+}
+.bottm span{
+    width: 1rem;
+    height: 0.3rem;
+    background-color: wheat;
+    display: inline-block;
+    animation: roade 2s linear infinite  ;
+}
+
+.right_box{
+    animation: rotate_forward_back 2s ease-in-out infinite; 
+}
+.left_box{
+    animation: rotate_forward_back 2s ease-in-out 1s infinite; 
+}
+.right{
+    animation: walk 2s ease-in-out 1s infinite reverse;
+}
+.left{
+    animation: walk 2s ease-in-out  infinite reverse;
+}
+
+@keyframes rotate_forward_back {
+    0%, 100% { 
+         transform: rotate(-22deg); 
+    } 
+    50% { 
+        transform: rotate(40deg); 
+    } 
+    
+}
+ @keyframes walk {
+    0%, 100% { 
+    transform: rotate(-1deg) translateY(-5px) translateX(5px); 
+    } 
+    25% { 
+    transform: rotate(0deg) translateY(0px) translateX(0); 
+    } 
+    50% { 
+    transform: rotate(10deg) translateY(-10px) translateX(5px); 
+    } 
+    75% { 
+    transform: rotate(0deg) translateY(-30px) translateX(0); 
+    } 
+
+} 
+@keyframes roade {
+    0%,100%{
+    transform: translateX(1px);
+    }
+    50%{
+    transform: translateX(-37px);
+    }
+    100%{
+    transform: translateX(-76px);
+    }
+}
